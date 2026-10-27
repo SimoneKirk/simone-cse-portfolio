@@ -1,0 +1,31 @@
+TPS 1
+
+1. Partners: Miranda, Judy, John
+
+2. Online tutorials: https://www.youtube.com/watch?v=y3zdCa08Ndw&time_continue=655&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fchatgpt.com%2F
+https://www.youtube.com/watch?v=y3zdCa08Ndw&time_continue=655&source_ve_path=NzY3NTg&embeds_referring_euri=https%3A%2F%2Fchatgpt.com%2F
+https://www.youtube.com/results?search_query=LLDB+tutorial+C+debugging&utm_source=chatgpt.com
+3. Shared the tutorials with my TPS partners.
+4. Bookmarked the tutorials in my browser.
+
+TPS 2
+
+1. Compile with `clang -g -o punish punishment.c`.
+2. Start LLDB with `lldb ./punish`.
+3. Run the program with `run`.
+4. A breakpoint pauses the program at a specific point. Use `breakpoint set --line [line number]`.
+5. Use `next` to run the program one line at a time.
+6. Use `frame variable variableName` to view a variable.
+7. Use `continue` to continue running the program.
+8. Use `quit` to exit LLDB.
+
+TPS 3
+
+1. There are 5 variables: x, y, px, py, and arr. Two are pointers: px and py.
+2. x, y, and arr[0] have indeterminate values because they are uninitialized.
+3. Initialize the variables when they are declared.
+4. Use `&x` and `&y` to print their memory addresses.
+5. Set `px` to the address of x and `py` to the address of y, then use `*px` and `*py` to access their values.
+6. Use pointer arithmetic to access each element of the array.
+7. No. An array name is not a pointer variable, but it usually acts like a pointer to the first element. `arr` and `&arr[0]` have the same address.
+8. `arr` and `&arr` have the same numerical address, but different types. `arr` refers to the first element, while `&arr` refers to the entire array.

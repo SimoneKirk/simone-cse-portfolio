@@ -1,0 +1,53 @@
+TPS 1
+
+1. TPS Partners:
+- Miranda
+- John
+- Judy
+
+2. Online Tutorials:
+- https://www.youtube.com/watch?v=hREnP0HslK8
+- https://www.youtube.com/watch?v=Y4DKg4WZRx4
+- https://www.youtube.com/watch?v=aKRYQsKR46I
+3. We shared our tutorials with our group.
+
+TPS 2
+
+1.  You can open a terminal through Terminal on Mac, PowerShell/Windows Terminal on Windows, or Terminal on Linux.
+
+a. Yes, you can open more than one terminal at the same time.
+
+b. Multiple terminals can be useful for working on different tasks at the same time.
+
+2. The command to see the contents of the current directory is ls.
+
+3. The command to navigate to Desktop is:
+cd Desktop
+
+4. The command to create the CSE31 directory is:
+mkdir CSE31
+
+TPS 3
+
+1. Two online GCC references:
+- https://www.youtube.com/watch?v=Ubfgi4NoTPk
+- https://www.youtube.com/watch?v=9BL-qP4YEzA
+
+2. We shared our GCC references with our TPS partners and bookmarked the references.
+
+3. The command to compile main.c is:
+gcc main.c -o main
+
+4. We know the program compiled successfully if GCC does not report errors and an executable file is created. We can also run the executable and see "Welcome to CSE 31!"
+
+5. The -c flag compiles the source file into an object file without creating the final executable.
+
+6. The -g flag adds debugging information to the executable.
+
+7. To change the executable name from main to cselab1:
+gcc main.c -o cselab1
+
+8. When we type gcc main.c without specifying an executable name, GCC creates an executable named a.out by default.
+
+9. To run the program:
+./main

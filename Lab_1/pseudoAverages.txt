@@ -1,0 +1,45 @@
+BEGINNING
+Create variables for:
+    [even sum]
+    [odd sum]
+    [even count]
+    [odd count]
+    [input counter]
+    [number]
+    [digit sum]
+    [temporary number]
+    [digit]
+    [averages]
+
+    Set the input counter to 1.
+
+    Repeat while the number is not 0:
+        Display the appropriate input prompt.
+        
+        Read the user's number.
+    If the number is 0: stop the loop.
+
+    Set the digit sum to 0.
+    Copy original number into a temporary variable.
+
+    If the temporary number is negative make it positive.
+
+    Repeat while the temporary number is greater than 0.
+
+    Get the last digit reaminder by dividing by 10.
+    Add the digit to the digit sum.
+    Remove the last digit from the temporay number.
+
+    If the sum is even: describe what happens to the even sum and count.
+    If else the sum is odd: describe what happens to the odd sum and count.
+
+    Increase the input counter.
+
+    If there are values in the even group:describe how the even average is calculated and displayed.
+
+    If there are values in the odd group: describe how the odd average is calculated and displayed.
+
+    If there are no values: Display that there is no average to compute.
+    
+
+END

@@ -1,0 +1,12 @@
+Individual Assignment 1
+
+1. The segmentation fault was caused by line 25 because scanf was given the input value instead of its address.
+2. The input variable needs to be passed by address so scanf knows where to store the value.
+3. Sum is passed by value, so the function only changes a copy. The sum in main stays 0.
+4. Pass sum by address using a pointer so the function can change the original value.
+
+Individual Assignment 2
+
+1. Yes, the output is expected.
+2. No. The previous string remains because the appended string is not properly terminated.
+3. No. The strings are too long for the allocated space, which can cause corrupted output.
