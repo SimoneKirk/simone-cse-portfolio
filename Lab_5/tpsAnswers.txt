@@ -1,0 +1,64 @@
+TPS 1
+
+1. MARS stands for MIPS Assembler and Runtime Simulator.
+
+2. Download the MARS `.jar` file from the MARS website and double-click it to open the simulator. Java must be installed for it to run.
+
+3. Download `MARS Tutorial.pdf`, `Fibonacci.asm`, and `myFirstExample.s` from the Lab 5 assignment page and save them in the `Lab_5` folder.
+
+4. How do you use MARS with Fibonacci.asm?
+
+a. Open MARS, click File -> Open**, select `Fibonacci.asm`, and click Open.
+
+b. Click Run -> Assemble or the Assemble button (the screwdriver icon).
+
+c. Click Run -> Go or the Go button (the green play icon).
+
+d. No. You must assemble the program first to check for errors and prepare it for execution.
+
+e. Click Run -> Step or the Step button to execute one instruction at a time.
+
+f. Reset the program using Run -> Reset or the reset button, then click Run -> Go to run it again. If necessary, assemble the program again first.
+
+TPS 2
+
+1. What do the `.data`, `.word`, and `.text` directives mean?**
+
+- `.data` marks the section where variables and data are stored in memory.
+- `.word` reserves space for a 32-bit (4-byte) integer and can initialize it with a value.
+- `.text` marks the section containing the program's instructions.
+
+**2. What does line 10 do?**
+
+I need to check line 10 of `fib.s` to give the exact answer.
+
+**3. What does line 15 do?**
+
+I need to check line 15 of `fib.s` to give the exact answer.
+
+**4. How do you set a breakpoint in MARS? Set a breakpoint on line 15 and list the steps.**
+
+1. Open `fib.s` in MARS.
+2. Find line 15 in the program.
+3. Click the checkbox or highlighted area next to line 15 in the left margin to set a breakpoint.
+4. Assemble the program.
+5. Run the program and verify that execution stops at the breakpoint.
+
+5. After your program stops because of a breakpoint, how do you continue executing your code? How do you step through your code?**
+
+- Click Run -> Go to continue execution.
+- Click Run -> Step to execute one instruction at a time.
+
+6. How can you find out the content of a register? How do you modify its value manually while running the program?**
+
+Look at the Registers panel in MARS to see register values. To change a value, double-click the register's value, enter the new value, and confirm the change. If the program is running, pause or stop execution as needed before editing.
+
+7. At what address is `n` stored in memory? Calculate the 13th Fibonacci number by modifying this memory location.**
+
+The exact address of `n` must be read from the assembled program in MARS. Open the **Data Segment** view and locate the variable `n`. Modify its stored value to `13` (decimal), then run the program again, if the program uses `n` as its input.
+
+Since `fib[0] = 0` and `fib[1] = 1`, the 13th indexed Fibonacci value is `fib[13] = 233`.
+
+8. Line 19 and 21 use the `syscall` instruction. What is it and how do you use it?**
+
+`syscall` requests a service from the MARS simulator, such as printing an integer or ending the program. You place the service number in register `$v0`, put any required arguments in registers such as `$a0`, and execute `syscall`. For example, service `1` prints an integer stored in `$a0`, while service `10` exits the program.

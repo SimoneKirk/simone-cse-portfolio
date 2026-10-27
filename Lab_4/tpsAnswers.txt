@@ -1,0 +1,80 @@
+TPS Activity 1
+
+1. I expected the program to print 2. When I compiled and ran MemCast.c, the program printed 2.
+
+2. I expected four_ints[0] to print 2 again because its value had not been changed yet.
+
+3. I added a print statement to output four_ints[0] in hexadecimal. It printed 44434241, which showed that the value changed after the memory was accessed through the char pointer.
+
+4. four_ints[1] printed 2 in hexadecimal. I was surprised at first because four_ints[0] changed to 44434241, but four_ints[1] stayed 2. This happens because the char pointer only changed the first 4 bytes of memory, which make up four_ints[0].
+
+5a. One array was declared. The array is four_ints. four_c is a pointer, not a second array.
+
+5b. Yes, four_ints and four_c point to the same starting memory location.
+
+5c.In my run, both had the same starting address, 0x16cfeb348, which verifies that they point to the same memory location.
+
+6. The addresses and values of four_ints are:
+
+four_ints[0]: address 0x16fa07348, value 44434241
+four_ints[1]: address 0x16fa0734c, value 2
+four_ints[2]: address 0x16fa07350, value 2
+four_ints[3]: address 0x16fa07354, value 2
+
+The difference between each consecutive address is 4 bytes. This means that each int takes up 4 bytes of memory. When the array index increases by 1, the address increases by 4 bytes because four_ints is an array of int.
+
+7. The array layout, with the smallest address on the right, is:
+
++-----------+-----------+-----------+-----------+
+| four_ints | four_ints | four_ints | four_ints |
+|    [3]    |    [2]    |    [1]    |    [0]    |
++-----------+-----------+-----------+-----------+
+0x16fa07354  0x16fa07350  0x16fa0734c  0x16fa07348
+2             2             2          44434241
+
+The smallest address is on the right, and the addresses increase by 4 bytes as the array index increases from 0 to 3.
+
+8. The addresses and values of four_c are:
+
+four_c[0]: address 0x16d687348, value 41
+four_c[1]: address 0x16d687349, value 42
+four_c[2]: address 0x16d68734a, value 43
+four_c[3]: address 0x16d68734b, value 44
+
+The difference between each consecutive address is 1 byte. This means that each char takes up 1 byte of memory. When the array index increases by 1, the address increases by 1 byte because four_c is a char pointer.
+
+9. The array layout, with the smallest address on the right, is:
+
++----------+----------+----------+----------+
+| four_c[3]| four_c[2]| four_c[1]| four_c[0]|
++----------+----------+----------+----------+
+0x16d68734b  0x16d68734a  0x16d687349  0x16d687348
+44           43           42           41
+
+The addresses increase by 1 byte as the array index increases.
+
+10. When the array index increases by 1, C moves to the next element based on the type of the array. For four_ints, the address increases by 4 bytes because an int uses 4 bytes. For four_c, the address increases by 1 byte because a char uses 1 byte. This shows that C uses the data type to determine how far to move in memory when the array index increases.
+
+TPS Activity 2
+
+1. Line #8 dynamically allocates memory for n pointers to integers. Since n is 5, it creates space for 5 row pointers. The int **arr is a double pointer that points to these row pointers. The actual rows of integers still need to be allocated separately.
+
+2. The ith row can be accessed using pointer notation as *(arr + i). This moves to the ith pointer in the array and gives the address of that row.
+
+3. I used pointer notation to allocate each row and initialize every element to 0. *(arr + i) accesses each row pointer, and *(*(arr + i) + j) accesses each integer in that row. The code works for different values of n because the loops use n instead of a fixed size.
+
+4. We need to pass the size as an argument because the printArray function needs to know how many rows and columns are in the 2-D array. The pointer by itself does not tell the function the size of the array.
+
+5. I used two loops to print the 2-D array. The outer loop goes through each row and the inner loop goes through each value in the row. I used pointer notation *(*(array + i) + j) to access each element and printed a new line after each row.
+
+6. I used nested loops to go through every position in the 2-D array. When the row index and column index are equal (i == j), I set that element to i + 1. This creates a diagonal matrix and works for different values of n.
+
+7. I called printArray(arr, n) after creating the diagonal matrix to print and verify the result. The output was:
+
+1 0 0 0 0
+0 2 0 0 0
+0 0 3 0 0
+0 0 0 4 0
+0 0 0 0 5
+
+I worked with Sarah and Ethan, used online textbook, and AI to help understand and draw it out.
